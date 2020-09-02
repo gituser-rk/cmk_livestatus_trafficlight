@@ -16,6 +16,7 @@ I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
 
 ### Preparation
+```
 root@orangepizero:~# 
 armbian-config
 apt update
@@ -26,7 +27,7 @@ cd /opt/trafficlight/
 git clone https://github.com/nvl1109/orangepi_zero_gpio.git
 cd orangepi_zero_gpio/
 python setup.py install
-
+```
 
 ## GPIO
 The gpio are named two ways:
