@@ -41,6 +41,7 @@ The gpio are named two ways:
 >>> from pyA20.gpio import connector
 >>> dir(connector)
 
+#pics/Orange-Pi-Zero-Pinout.jpg
 
 
 https://github.com/nvl1109/orangepi_zero_gpio
