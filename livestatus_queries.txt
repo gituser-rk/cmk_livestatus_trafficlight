@@ -1,0 +1,14 @@
+#count unacknowledged service errors:
+lq "GET services\nStats: state > 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0"                          
+#result:
+22
+
+#count unacknowledged service errors in WARNING:
+lq "GET services\nStats: state = 1\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0"                          
+#count unacknowledged service errors in CRITICAL:
+lq "GET services\nStats: state = 2\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0"                          
+
+#count unacknowledged host errors:
+lq "GET hosts\nStats: state > 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0"
+#result:
+0
