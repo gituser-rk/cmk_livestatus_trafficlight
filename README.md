@@ -18,6 +18,21 @@ https://www.armbian.com/orange-pi-zero/
 ## Script
 Python
 
+## Livestatus Queries
+Three queries are necessary:
+1) check if hosts, which relates to certain 'contact_groups' are unacknowledged in status CRITICAL or WARN
+2) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged in status CRITICAL
+3) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged in status WARN
+
+
+Query 1 result>0 leads always to a red Light
+
+Query 2 result>0 leads to a red Light
+
+Query 3 result>0 leads to a yellow Light
+
+If none of the queries returns a number greater 0, the green light is turned on and all other lights are turned off.
+
 # Enable Livestatus
 Enable Livestatus API access from network:
 
