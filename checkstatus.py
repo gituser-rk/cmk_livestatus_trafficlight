@@ -1,5 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Sample program for accessing Livestatus from Python
+# /opt/trafficlight/checkststus.py
 
 import json, os, socket
 
@@ -14,10 +15,13 @@ sock = socket.socket(family, socket.SOCK_STREAM)
 
 
 ### start query 1
+query1 = "GET \'hosts\\nOutputFormat: json\\nStats: state > 0\\nFilter: contact_groups ~ Netzwerk | Linux\\nFilter: host_acknowledged = 0\'"
+#print(query1)
 sock.connect(address)
 
 # send our request and let Livestatus know we're done
-sock.sendall(GET "hosts\nOutputFormat: json\nStats: state > 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0")
+#sock.sendall(GET 'hosts\nOutputFormat: json\nStats: state > 0\nFilter: contact_groups ~ Netzwerk \\| Linux\nFilter: host_acknowledged = 0')
+sock.sendall(query1)
 sock.shutdown(socket.SHUT_WR)
 
 # receive the reply as a JSON string
@@ -28,6 +32,6 @@ sock.close()
 reply = "".join(chunks)
 
 # print the parsed reply
-print("Hosts in ststus CRITICAL:")
+print("Hosts in status CRITICAL:")
 print(json.loads(reply))
 ### end query 1
