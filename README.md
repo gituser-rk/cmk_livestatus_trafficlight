@@ -15,6 +15,14 @@ http://www.orangepi.org/orangepizero/
 I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
 
+### Preparation
+root@orangepizero:~# 
+armbian-config
+apt update
+apt upgrade
+install python3-pip
+
+
 ## Script
 Python
 
