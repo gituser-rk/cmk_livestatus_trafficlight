@@ -20,11 +20,35 @@ root@orangepizero:~#
 armbian-config
 apt update
 apt upgrade
-install python3-pip
+#apt install python3-pip
+apt install python-dev
+cd /opt/trafficlight/
+git clone https://github.com/nvl1109/orangepi_zero_gpio.git
+cd orangepi_zero_gpio/
+python setup.py install
 
+
+## GPIO
+The gpio are named two ways:
+
+    By port name: PH0, PG2, PE10, etc. These can be imported from port module:
+
+>>> from pyA20.gpio import port
+>>> dir(port)
+
+    By connector name and pin number: gpio2p12, gpio3p8, lcdp18, uext1p3 and etc:
+
+>>> from pyA20.gpio import connector
+>>> dir(connector)
+
+
+
+https://github.com/nvl1109/orangepi_zero_gpio
 
 ## Script
-Python
+Python script is located at:
+/opt/trafficlight/checkstatus.py
+
 
 ## Livestatus Queries
 Three queries are necessary:
