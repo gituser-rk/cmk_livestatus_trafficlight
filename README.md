@@ -44,8 +44,12 @@ https://github.com/nvl1109/orangepi_zero_gpio
 
 ## Power Supply
 
+12V spare pin supply
+PoE pin of Orangepizero wired to input of stepdown converter. Output of stepdown converter wired to 5V pin of Orangepizero.
+
 https://www.makershop.de/module/step-downup/mini-dc-dc-spannungswandler-xm1584sstep-down-modul-3a-08v-20v/
-![Pic2](pics/stepdown.png)
+
+![Pic2](pics/stepdown.PNG)
 
 ## Script
 Python script is located at:
