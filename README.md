@@ -30,17 +30,9 @@ python setup.py install
 ```
 
 ## GPIO
-The gpio are named two ways:
-
-    By port name: PH0, PG2, PE10, etc. These can be imported from port module:
-
->>> from pyA20.gpio import port
->>> dir(port)
-
-    By connector name and pin number: gpio2p12, gpio3p8, lcdp18, uext1p3 and etc:
-
->>> from pyA20.gpio import connector
->>> dir(connector)
+RED LED: Port PG6
+YELLOW LED: Port PG7
+GREEN LED: Port PA7
 
 ![Pic1](pics/Orange-Pi-Zero-Pinout.jpg)
 
@@ -50,7 +42,8 @@ https://github.com/nvl1109/orangepi_zero_gpio
 ## Script
 Python script is located at:
 /opt/trafficlight/checkstatus.py
-
+Tasks: Query Livestatus, set LED Status
+Cronjob every minute
 
 ## Livestatus Queries
 Three queries are necessary:
