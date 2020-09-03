@@ -41,6 +41,12 @@ GREEN LED: Port PA7
 
 https://github.com/nvl1109/orangepi_zero_gpio
 
+
+## Power Supply
+
+https://www.makershop.de/module/step-downup/mini-dc-dc-spannungswandler-xm1584sstep-down-modul-3a-08v-20v/
+![Pic2](pics/stepdown.png)
+
 ## Script
 Python script is located at:
 
