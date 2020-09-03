@@ -31,7 +31,9 @@ python setup.py install
 
 ## GPIO
 RED LED: Port PG6
+
 YELLOW LED: Port PG7
+
 GREEN LED: Port PA7
 
 ![Pic1](pics/Orange-Pi-Zero-Pinout.jpg)
@@ -41,8 +43,11 @@ https://github.com/nvl1109/orangepi_zero_gpio
 
 ## Script
 Python script is located at:
+
 /opt/trafficlight/checkstatus.py
+
 Tasks: Query Livestatus, set LED Status
+
 Cronjob every minute
 
 ## Livestatus Queries
