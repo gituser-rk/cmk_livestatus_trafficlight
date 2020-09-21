@@ -11,11 +11,11 @@ PORT = 6557
 
 #count of unacknowledged hosts in state CRITICAL:
 #query1 = "GET hosts\\nStats: state > 0\\nFilter: contact_groups ~ Netzwerk|Linux\\nFilter: host_acknowledged = 0\\n"
-query1 = "GET hosts\nStats: state > 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\n\n\n"
+query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\n\n\n"
 #count of unacknowledged service errors in state CRITICAL:
-query2 = "GET services\nStats: state = 2\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n\n"
+query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n\n"
 #count of unacknowledged service errors in state WARNING:i
-query3 = "GET services\nStats: state = 1\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n\n"
+query3 = "GET services\nStats: state = 1\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n\n"
 
 ### start query 1
 # connect to Livestatus
