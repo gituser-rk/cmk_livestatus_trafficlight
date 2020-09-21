@@ -23,6 +23,7 @@ apt update
 apt upgrade
 #apt install python3-pip
 apt install python-dev
+mkdir /opt/trafficlight/
 cd /opt/trafficlight/
 git clone https://github.com/nvl1109/orangepi_zero_gpio.git
 cd orangepi_zero_gpio/
@@ -56,18 +57,18 @@ Python script is located at:
 
 /opt/trafficlight/checkstatus.py
 
-Tasks: Query Livestatus, set LED Status
+Tasks: Query Livestatus, calculate and set LED Status
 
-Cronjob every minute
+Loop every 30 seconds
 
 ## Livestatus Queries
 Three queries are necessary:
-1) check if hosts, which relates to certain 'contact_groups' are unacknowledged in status CRITICAL or WARN
-2) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged in status CRITICAL
-3) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged in status WARN
+1) check if hosts, which relates to certain 'contact_groups' are unacknowledged (and not in scheduled maintanance) in status CRITICAL or WARN
+2) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged (and not in scheduled maintanance) in status CRITICAL
+3) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged (and not in scheduled maintanance) in status WARN
 
 
-Query 1 result>0 leads always to a red Light
+Query 1 result>0 leads to a red Light
 
 Query 2 result>0 leads to a red Light
 
