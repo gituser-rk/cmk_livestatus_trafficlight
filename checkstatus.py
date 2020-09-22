@@ -10,8 +10,7 @@ if not os.getegid() == 0:
 debug = False
 
 # for local/remote sites: TCP address/port for CheckMK Livestatus socket
-#HOST = '172.20.20.92'
-HOST = 'omd.ilb.int'
+HOST = 'omd.domain.tld'
 PORT = 6557
 # refresh interval in seconds
 INTERVAL = 10
