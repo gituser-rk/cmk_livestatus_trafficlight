@@ -76,7 +76,7 @@ GREEN LED: Port PA7
 
 https://github.com/nvl1109/orangepi_zero_gpio
 
-![Pic5](pics/5.jpg)
+![Pic9](pics/9.jpg)
 
 ## Power Supply
 
@@ -110,3 +110,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 ![Pic6](pics/6.jpg)
 
 ![Pic7](pics/7.jpg)
+
+![Pic8](pics/8.jpg)
