@@ -2,16 +2,18 @@
 # Program for accessing CheckMK Livestatus over network and switching a traffic light depending of the query results
 # recommended location of the program: /opt/trafficlight/checkstatus.py
 import socket, os, sys
+clear = lambda: os.system('clear')
+
 if not os.getegid() == 0:
     sys.exit('Script must run as root')
-# set to true for debug output, otherwise to false
-debug = true
-clear = lambda: os.system('clear')
+# set to True for debug output, otherwise to False
+debug = False
 
 # for local/remote sites: TCP address/port for CheckMK Livestatus socket
 #HOST = '172.20.20.92'
 HOST = 'omd.ilb.int'
 PORT = 6557
+INTERVAL = 10
 
 from time import sleep
 from pyA20.gpio import gpio
@@ -63,7 +65,7 @@ try:
         s.close()
         ### end query 3
 
-        if debug == true:
+        if debug == True:
             clear()
             print('   Hosts in state CRITICAL: ', reply1.decode('utf-8'))
             print('Services in state CRITICAL: ', reply2.decode('utf-8'))
@@ -71,28 +73,28 @@ try:
 
         # calculate LED state
         # Red LED
-        if reply1 > 0 or reply2 > 0: 
+        if int(reply1) > 0 or int(reply2) > 0:
             stateR = 1
         else:
             stateR = 0
         # Yellow LED
-        if reply3 > 0: 
+        if int(reply3) > 0:
             stateY = 1
         else:
             stateY = 0
         # Green LED
-        if stateR == 0 and stateY == 0: 
+        if stateR == 0 and stateY == 0:
             stateG = 1
         else:
-            stateG = 0       
+            stateG = 0
         # set LED state
         gpio.output(ledR, stateR)
         gpio.output(ledY, stateY)
         gpio.output(ledG, stateG)
-        if debug == true:
+        if debug == True:
             print ('LED Red     state: ', stateR)
             print ('LED Yellow  state: ', stateY)
             print ('LED Green   state: ', stateG)
-        sleep(10)
-    except KeyboardInterrupt:
-        print ("Goodbye.")
+        sleep(INTERVAL)
+except KeyboardInterrupt:
+   print ("Goodbye.")
