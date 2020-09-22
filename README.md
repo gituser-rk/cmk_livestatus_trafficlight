@@ -17,8 +17,8 @@ I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
 
 ### Preparation
+compile the GPIO library
 ```
-root@orangepizero:~# 
 root@orangepizero:~# armbian-config
 root@orangepizero:~# apt update
 root@orangepizero:~# apt upgrade
@@ -29,14 +29,20 @@ root@orangepizero:~# git clone https://github.com/nvl1109/orangepi_zero_gpio.git
 root@orangepizero:~# cd orangepi_zero_gpio/
 root@orangepizero:~# python3 setup.py install
 ```
-## Script
-Python script is located at:
+## Python program
+Copy the Python program "checkstatus.py" to the folder /opt/trafficlight.
 
 /opt/trafficlight/checkstatus.py
 
-Tasks: Query Livestatus, calculate and set LED Status
+Tasks of the program: Query Livestatus, calculate and set LED Status
+Loop every 10 seconds.
 
-Loop every 30 seconds
+### Autostart
+Put the following two lines in /etc/rc.local (before 'exit 0' !!!):
+```
+cd /opt/trafficlight/
+./checkstatus.py
+```
 
 ## Livestatus Queries
 Three queries are necessary:
@@ -54,7 +60,7 @@ Query 3 result>0 leads to a yellow Light
 If none of the queries returns a number greater 0, the green light is turned on and all other lights are turned off.
 
 # Enable Livestatus
-Enable Livestatus API access from network:
+Enable Livestatus API access in CheckMK from network:
 
 omd stop;omd config set LIVESTATUS_TCP on;omd config set LIVESTATUS_TCP_ONLY_FROM '172.18.1.91';omd start
 
@@ -74,9 +80,15 @@ https://github.com/nvl1109/orangepi_zero_gpio
 
 ## Power Supply
 
-12V/0.5A feeding via Ethernet cable spare pins. This should be enough for 5 to 10 meters cable length. which is the case for me. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation. I've removed them anyway.
+12V/0.5A feeding via Ethernet cable spare pins. This should be enough for 5 to 15 meters cable length depending on the cable quality. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation. I've removed them anyway.
 PoE pin of Orangepizero wired to input of stepdown converter. Output of stepdown converter wired to 5V pin of Orangepizero.
 Power consumtion: The maximum power consumtion I saw at 12V side was 3.4 Watt during bootup when all LEDs (external, trafficlight) are on. After bootup a maximum of 1.6 Watts is drawn when all LEDs are on.
+Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck converter as a protection in case of wrong polarity.
+```
++12V PoE o----=>|----o +Vin buck converter +5V Vout o----------o +5V OrangePi Zero
+
+  0V PoE o-----------o -Vin buck converter -5V Vout o----------o GND OrangePi Zero
+```
 
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
 
