@@ -29,29 +29,6 @@ root@orangepizero:~# git clone https://github.com/nvl1109/orangepi_zero_gpio.git
 root@orangepizero:~# cd orangepi_zero_gpio/
 root@orangepizero:~# python3 setup.py install
 ```
-
-## GPIO
-RED LED: Port PG6
-
-YELLOW LED: Port PG7
-
-GREEN LED: Port PA7
-
-![Pic1](pics/Orange-Pi-Zero-Pinout.jpg)
-
-
-https://github.com/nvl1109/orangepi_zero_gpio
-
-
-## Power Supply
-
-12V feeding via Ethernet cable spare pins. This should be enough for 5 to 10 meters cable length. which is the case for me. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation.
-PoE pin of Orangepizero wired to input of stepdown converter. Output of stepdown converter wired to 5V pin of Orangepizero.
-
-https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
-
-![Pic2](pics/stepdown.PNG)
-
 ## Script
 Python script is located at:
 
@@ -80,3 +57,39 @@ If none of the queries returns a number greater 0, the green light is turned on 
 Enable Livestatus API access from network:
 
 omd stop;omd config set LIVESTATUS_TCP on;omd config set LIVESTATUS_TCP_ONLY_FROM '172.18.1.91';omd start
+
+## GPIO
+
+RED LED: Port PG6
+
+YELLOW LED: Port PG7
+
+GREEN LED: Port PA7
+
+![Pic11](pics/Orange-Pi-Zero-Pinout.jpg)
+
+https://github.com/nvl1109/orangepi_zero_gpio
+
+![Pic5](pics/5.jpg)
+
+## Power Supply
+
+12V feeding via Ethernet cable spare pins. This should be enough for 5 to 10 meters cable length. which is the case for me. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation.
+PoE pin of Orangepizero wired to input of stepdown converter. Output of stepdown converter wired to 5V pin of Orangepizero.
+
+https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
+
+![Pic0](pics/stepdown.PNG)
+![Pic4](pics/4.jpg)
+
+## More Pictures
+
+![Pic1](pics/1.jpg)
+
+![Pic2](pics/2.jpg)
+
+![Pic3](pics/3.jpg)
+
+![Pic6](pics/6.jpg)
+
+![Pic7](pics/7.jpg)
