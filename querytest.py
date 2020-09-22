@@ -5,8 +5,7 @@ import socket
 #import json, os, socket
 
 # for local/remote sites: TCP address/port for Livestatus socket
-#HOST = '172.20.20.92'
-HOST = 'omd.ilb.int'
+HOST = 'omd.domain.tld'
 PORT = 6557
 
 #count of unacknowledged hosts in state CRITICAL:
