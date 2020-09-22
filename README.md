@@ -7,7 +7,8 @@ https://checkmk.com/cms_livestatus.html
 
 
 # Platform
-Linux board with i/o ports and LAN interface as platform
+Linux board with i/o ports and LAN interface as platform. For me a wired LAN interface was important. 
+This is the board I used:
 
 http://www.orangepi.org/orangepizero/
 
@@ -18,15 +19,15 @@ https://www.armbian.com/orange-pi-zero/
 ### Preparation
 ```
 root@orangepizero:~# 
-armbian-config
-apt update
-apt upgrade
-apt install python3-dev
-mkdir /opt/trafficlight/
-cd /opt/trafficlight/
-git clone https://github.com/nvl1109/orangepi_zero_gpio.git
-cd orangepi_zero_gpio/
-python3 setup.py install
+root@orangepizero:~# armbian-config
+root@orangepizero:~# apt update
+root@orangepizero:~# apt upgrade
+root@orangepizero:~# apt install python3-dev
+root@orangepizero:~# mkdir /opt/trafficlight/
+root@orangepizero:~# cd /opt/trafficlight/
+root@orangepizero:~# git clone https://github.com/nvl1109/orangepi_zero_gpio.git
+root@orangepizero:~# cd orangepi_zero_gpio/
+root@orangepizero:~# python3 setup.py install
 ```
 
 ## GPIO
@@ -44,7 +45,7 @@ https://github.com/nvl1109/orangepi_zero_gpio
 
 ## Power Supply
 
-12V feed via Ethernet cable spare pins.
+12V feeding via Ethernet cable spare pins. This should be enough for 5 to 10 meters cable length. which is the case for me. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation.
 PoE pin of Orangepizero wired to input of stepdown converter. Output of stepdown converter wired to 5V pin of Orangepizero.
 
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
