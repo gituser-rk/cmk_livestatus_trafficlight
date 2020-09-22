@@ -13,6 +13,7 @@ debug = False
 #HOST = '172.20.20.92'
 HOST = 'omd.ilb.int'
 PORT = 6557
+# refresh interval in seconds
 INTERVAL = 10
 
 from time import sleep
