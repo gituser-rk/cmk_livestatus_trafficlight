@@ -74,19 +74,24 @@ https://github.com/nvl1109/orangepi_zero_gpio
 
 ## Power Supply
 
-12V feeding via Ethernet cable spare pins. This should be enough for 5 to 10 meters cable length. which is the case for me. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation.
+12V/0.5A feeding via Ethernet cable spare pins. This should be enough for 5 to 10 meters cable length. which is the case for me. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation. I've removed them anyway.
 PoE pin of Orangepizero wired to input of stepdown converter. Output of stepdown converter wired to 5V pin of Orangepizero.
+Power consumtion: The maximum power consumtion I saw at 12V side was 3.4 Watt during bootup when all LEDs (external, trafficlight) are on. After bootup a maximum of 1.6 Watts is drawn when all LEDs are on.
 
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
 
 ![Pic0](pics/stepdown.PNG)
+(use the fixed-output version. The ones with variable output are unreliable! Tried it with no luck)
+
 ![Pic4](pics/4.jpg)
 
 ## More Pictures
 
 ![Pic1](pics/1.jpg)
+(The trafficlight was delivered with a tiny microcontroller and driver transistors at the LED board)
 
 ![Pic2](pics/2.jpg)
+(I've removed the microcontroller and connected the OrangePi Zero through flexible cables to the solder pads where the output pins of the removed microcontroller where)
 
 ![Pic3](pics/3.jpg)
 
