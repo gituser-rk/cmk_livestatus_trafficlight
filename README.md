@@ -21,13 +21,12 @@ root@orangepizero:~#
 armbian-config
 apt update
 apt upgrade
-#apt install python3-pip
-apt install python-dev
+apt install python3-dev
 mkdir /opt/trafficlight/
 cd /opt/trafficlight/
 git clone https://github.com/nvl1109/orangepi_zero_gpio.git
 cd orangepi_zero_gpio/
-python setup.py install
+python3 setup.py install
 ```
 
 ## GPIO
