@@ -82,11 +82,13 @@ https://github.com/nvl1109/orangepi_zero_gpio
 
 12V/0.5A feeding via Ethernet cable spare pins. This should be enough for 5 to 15 meters cable length depending on the cable quality. If you need to provide the power over a longer cable, you schould use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation. I've removed them anyway.
 PoE pin of Orangepizero wired to input of stepdown converter. Output of stepdown converter wired to 5V pin of Orangepizero.
+
 Power consumtion: The maximum power consumtion I saw at 12V side was 3.4 Watt during bootup when all LEDs (external, trafficlight) are on. After bootup a maximum of 1.6 Watts is drawn when all LEDs are on.
 Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck converter as a protection in case of wrong polarity.
 ```
 +12V PoE o----=>|----o +Vin buck converter +5V Vout o----------o +5V OrangePi Zero
-
+             1N4007
+             
   0V PoE o-----------o -Vin buck converter -5V Vout o----------o GND OrangePi Zero
 ```
 
