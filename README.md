@@ -19,15 +19,16 @@ https://www.armbian.com/orange-pi-zero/
 ### Preparation
 update linux system and compile the GPIO library
 ```
-root@orangepizero:~# armbian-config
-root@orangepizero:~# apt update
-root@orangepizero:~# apt upgrade
-root@orangepizero:~# apt install python3-dev
-root@orangepizero:~# mkdir /opt/trafficlight/
-root@orangepizero:~# cd /opt/trafficlight/
-root@orangepizero:~# git clone https://github.com/nvl1109/orangepi_zero_gpio.git
-root@orangepizero:~# cd orangepi_zero_gpio/
-root@orangepizero:~# python3 setup.py install
+root@orangepizero:~# 
+armbian-config
+apt update
+apt upgrade
+apt install python3-dev
+mkdir /opt/trafficlight/
+cd /opt/trafficlight/
+git clone https://github.com/nvl1109/orangepi_zero_gpio.git
+cd orangepi_zero_gpio/
+python3 setup.py install
 ```
 ## Python program
 Copy the Python program "checkstatus.py" to the folder /opt/trafficlight.
@@ -115,5 +116,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NTk0ODIyMl19
+eyJoaXN0b3J5IjpbLTE0NDQ3MzY1OTBdfQ==
 -->
