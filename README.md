@@ -114,3 +114,6 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 ![Pic7](pics/7.jpg)
 
 ![Pic8](pics/8.jpg)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTM1NDAzODUxM119
+-->
