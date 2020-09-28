@@ -17,7 +17,7 @@ I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
 
 ### Preparation
-compile the GPIO library
+update linux system compile the GPIO library
 ```
 root@orangepizero:~# armbian-config
 root@orangepizero:~# apt update
@@ -115,5 +115,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcxMDIxNzcxXX0=
+eyJoaXN0b3J5IjpbLTc5Njk4MTE1OV19
 -->
