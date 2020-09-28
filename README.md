@@ -108,7 +108,7 @@ Here I bought the buck converter (no affiliate link ;-)  ):
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
 
 ![Pic0](pics/stepdown.PNG)
-(use the fixed-output version. The ones with variable output are unreliable! Tried it with no luck)
+Use the fixed-output version. The ones with variable output are unreliable!
 
 ![Pic4](pics/4.jpg)
 
@@ -129,7 +129,7 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE0NzQ4MTQ1LC0xNjY5NTE5NzE5LC0xNT
-Q4NzYwMTkzLC0xODgxMjE0MjY4LDE1ODIyODM3MTgsMTA0ODE5
-OTk5M119
+eyJoaXN0b3J5IjpbLTIwNTU3NDI2NTcsLTE2Njk1MTk3MTksLT
+E1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4
+MTk5OTkzXX0=
 -->
