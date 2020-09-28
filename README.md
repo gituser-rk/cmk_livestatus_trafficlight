@@ -33,8 +33,9 @@ root@orangepizero:~# python3 setup.py install
 Copy the Python program "checkstatus.py" to the folder /opt/trafficlight.
 
 or:
-root@orangepizero:~# cd /opt/trafficlight/
-root@orangepizero:~# git clone https://github.com/nvl1109/orangepi_zero_gpio.git
+
+    root@orangepizero:~# cd /opt/trafficlight/ 
+    root@orangepizero:~# git clone https://github.com/gituser_rk/# **[cmk_livestatus_trafficlight](https://github.com/gituser-rk/cmk_livestatus_trafficlight)**.git
 
 
 /opt/trafficlight/checkstatus.py
@@ -120,5 +121,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzIwOTM4MzZdfQ==
+eyJoaXN0b3J5IjpbMTI0NDU5NDUwMl19
 -->
