@@ -1,7 +1,7 @@
 # cmk_livestatus_trafficlight
 Trafficlight-style status display for CheckMK monitoring solution
 
-# Livestatus API
+# CheckMK Livestatus API
 A description can be found here:
 https://checkmk.com/cms_livestatus.html
 
@@ -115,5 +115,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NDAzODUxM119
+eyJoaXN0b3J5IjpbOTcxMDIxNzcxXX0=
 -->
