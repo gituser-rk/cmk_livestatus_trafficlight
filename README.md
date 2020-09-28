@@ -73,7 +73,7 @@ Enable Livestatus API access in CheckMK from network:
 
 ## GPIO
 
-I usesed these pins as output for the LEDs:
+I've used these pins as output for the LEDs:
  - RED LED: Port PG6
  - YELLOW LED: Port PG7
  - GREEN LED: Port PA7
@@ -122,6 +122,6 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgyMjk4MTI5LC0xNTQ4NzYwMTkzLC0xOD
-gxMjE0MjY4LDE1ODIyODM3MTgsMTA0ODE5OTk5M119
+eyJoaXN0b3J5IjpbLTE2Njk1MTk3MTksLTE1NDg3NjAxOTMsLT
+E4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
 -->
