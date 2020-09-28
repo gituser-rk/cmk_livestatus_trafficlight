@@ -131,16 +131,17 @@ Here are some more pictures taken during the realisation of the project.
 (I've removed the microcontroller and connected the OrangePi Zero through flexible cables to the solder pads where the output pins of the removed microcontroller where)
 
 ![Pic3](pics/3.jpg)
+(Fixed the wires with hot glue)
 
 ![Pic6](pics/6.jpg)
-
+(LED board remounted at backside)
 ![Pic7](pics/7.jpg)
 
 ![Pic8](pics/8.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzE5ODQ2MSwtMjU4NzMxMjkwLDE1MD
-Q5NDEzNTAsLTIwNTgzNjgxMzYsLTE2Njk1MTk3MTksLTE1NDg3
-NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OT
-kzXX0=
+eyJoaXN0b3J5IjpbLTE5NTYyMzQ1ODMsMTExMzE5ODQ2MSwtMj
+U4NzMxMjkwLDE1MDQ5NDEzNTAsLTIwNTgzNjgxMzYsLTE2Njk1
+MTk3MTksLTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4Mz
+cxOCwxMDQ4MTk5OTkzXX0=
 -->
