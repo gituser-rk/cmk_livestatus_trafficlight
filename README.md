@@ -87,7 +87,7 @@ Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck c
              
   0V PoE o-----------o -Vin buck converter -5V Vout o----------o GND OrangePi Zero
 ```
-Here I bought the buck converter (no afilliate link ;-) ):
+Here I bought the buck converter (no affiliate link ;-)  ):
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
 
 ![Pic0](pics/stepdown.PNG)
@@ -96,7 +96,7 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 ![Pic4](pics/4.jpg)
 
 ## More Pictures
-
+Here are some more pictur
 ![Pic1](pics/1.jpg)
 (The trafficlight was delivered with a tiny microcontroller and driver transistors at the LED board)
 
@@ -111,5 +111,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYyMDkwNjgwXX0=
+eyJoaXN0b3J5IjpbLTE3MzU2NTQ2Nl19
 -->
