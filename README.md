@@ -15,7 +15,7 @@ http://www.orangepi.org/orangepizero/
 ## OS
 I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
-Downloaded and installed on a Sandisk 16GB uSD card as described 
+Downloaded and installed at a Sandisk 16GB uSD card as described there.
 
 ### Preparation
 update linux system and compile the GPIO library
@@ -115,5 +115,5 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY2OTAxNDIxLDEwNDgxOTk5OTNdfQ==
+eyJoaXN0b3J5IjpbLTEzNjQ0ODUzNjUsMTA0ODE5OTk5M119
 -->
