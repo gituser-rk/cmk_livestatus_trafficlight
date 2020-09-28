@@ -60,11 +60,12 @@ If none of the queries returns a number greater 0, the green light is turned on 
 # Enable Livestatus
 Enable Livestatus API access in CheckMK from network:
 
-    [site]
+    [sitename-user]@checkmk server:~#
     omd stop;omd config set LIVESTATUS_TCP on;omd config set LIVESTATUS_TCP_ONLY_FROM '172.18.1.91';omd start
 
 ## GPIO
 
+I usesed these pins as output for the LEDs:
  - RED LED: Port PG6
  - YELLOW LED: Port PG7
  - GREEN LED: Port PA7
@@ -113,5 +114,5 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0ODEzNTcxMl19
+eyJoaXN0b3J5IjpbMTA0ODE5OTk5M119
 -->
