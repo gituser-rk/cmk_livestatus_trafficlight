@@ -51,12 +51,9 @@ Three queries are necessary:
 2) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged (and not in scheduled maintanance) in status CRITICAL
 3) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged (and not in scheduled maintanance) in status WARN
 
-
-Query 1 result>0 leads to a red Light
-
-Query 2 result>0 leads to a red Light
-
-Query 3 result>0 leads to a yellow Light
+ - Query 1 result>0 leads to a red Light
+ - Query 2 result>0 leads to a red Light
+ - Query 3 result>0 leads to a yellow Light
 
 If none of the queries returns a number greater 0, the green light is turned on and all other lights are turned off.
 
@@ -67,11 +64,9 @@ omd stop;omd config set LIVESTATUS_TCP on;omd config set LIVESTATUS_TCP_ONLY_FRO
 
 ## GPIO
 
-RED LED: Port PG6
-
-YELLOW LED: Port PG7
-
-GREEN LED: Port PA7
+ - RED LED: Port PG6
+ - YELLOW LED: Port PG7
+ - GREEN LED: Port PA7
 
 ![Pic11](pics/Orange-Pi-Zero-Pinout.jpg)
 
@@ -116,5 +111,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQ3MzY1OTBdfQ==
+eyJoaXN0b3J5IjpbLTE3MDA3OTA4MzZdfQ==
 -->
