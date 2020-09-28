@@ -91,7 +91,8 @@ https://github.com/nvl1109/orangepi_zero_gpio
 
 ## Power Supply
 
-I've decided to choose a 12V/0.5A feeding via Ethernet cable spare pins. This should be enough for 5 to 15 meters cable length depending on the cable quality. If you need to provide the power over a longer cable, you should use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation. I've removed them anyway.
+I've decided to choose a 12V/0.5A feeding via Ethernet cable spare pins. This should be enough for 5 to 15 meters cable length depending on the cable quality. If you need to provide the power over a longer cable, you should use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation [here](https://linux-sunxi.org/Xunlong_Orange_Pi_Zero#Passive_PoE)
+I've removed them anyway.
 A stepdown (buck) converter is needed to provide the neccesary 5V for the OrangePi Zero.
 
 ### Wiring:
@@ -138,7 +139,8 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1ODczMTI5MCwxNTA0OTQxMzUwLC0yMD
-U4MzY4MTM2LC0xNjY5NTE5NzE5LC0xNTQ4NzYwMTkzLC0xODgx
-MjE0MjY4LDE1ODIyODM3MTgsMTA0ODE5OTk5M119
+eyJoaXN0b3J5IjpbMTExMzE5ODQ2MSwtMjU4NzMxMjkwLDE1MD
+Q5NDEzNTAsLTIwNTgzNjgxMzYsLTE2Njk1MTk3MTksLTE1NDg3
+NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OT
+kzXX0=
 -->
