@@ -87,7 +87,7 @@ Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck c
              
   0V PoE o-----------o -Vin buck converter -5V Vout o----------o GND OrangePi Zero
 ```
-
+Here I bought the buck converter (no afilliate link ;-) ):
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
 
 ![Pic0](pics/stepdown.PNG)
@@ -111,5 +111,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDg1MDI5MzhdfQ==
+eyJoaXN0b3J5IjpbMjYyMDkwNjgwXX0=
 -->
