@@ -37,7 +37,7 @@ cd orangepi_zero_gpio/
 python3 setup.py install
 ```
 ## Python program
-Python Version at day of writing: Python 3.8.2
+Installed Python version at day of writing: Python 3.8.2
 
 Copy the Python program "checkstatus.py" to the folder /opt/trafficlight.
 
@@ -47,7 +47,7 @@ Tasks of the program: Query Livestatus, calculate and set LED Status
 Loop every [INTERVAL] seconds.
 
 ### Autostart
-Put the following two lines in /etc/rc.local (before 'exit 0' !!!):
+Put the following two lines in /etc/rc.local (above 'exit 0' !!!):
 ```
 cd /opt/trafficlight/
 ./checkstatus.py
@@ -122,6 +122,6 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NTc1NTUsLTE1NDg3NjAxOTMsLTE4OD
-EyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbLTE2NzAxNDMwODMsLTE1NDg3NjAxOTMsLT
+E4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
 -->
