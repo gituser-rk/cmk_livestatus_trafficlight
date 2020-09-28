@@ -135,13 +135,15 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic6](pics/6.jpg)
 (LED board remounted at backside)
+
 ![Pic7](pics/7.jpg)
 (View inside the head)
+
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MTc0MDA5NCwtMTk1NjIzNDU4MywxMT
-EzMTk4NDYxLC0yNTg3MzEyOTAsMTUwNDk0MTM1MCwtMjA1ODM2
-ODEzNiwtMTY2OTUxOTcxOSwtMTU0ODc2MDE5MywtMTg4MTIxND
-I2OCwxNTgyMjgzNzE4LDEwNDgxOTk5OTNdfQ==
+eyJoaXN0b3J5IjpbLTE3MTQ4MjY3NTQsLTE5NTYyMzQ1ODMsMT
+ExMzE5ODQ2MSwtMjU4NzMxMjkwLDE1MDQ5NDEzNTAsLTIwNTgz
+NjgxMzYsLTE2Njk1MTk3MTksLTE1NDg3NjAxOTMsLTE4ODEyMT
+QyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
 -->
