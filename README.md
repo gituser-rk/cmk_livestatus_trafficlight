@@ -1,6 +1,7 @@
 # cmk_livestatus_trafficlight
 Trafficlight-style status display for CheckMK monitoring solution
 
+
 # CheckMK Livestatus API
 A description can be found here:
 https://checkmk.com/cms_livestatus.html
@@ -121,6 +122,6 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMT
-U4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbLTI4NTc1NTUsLTE1NDg3NjAxOTMsLTE4OD
+EyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
 -->
