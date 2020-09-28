@@ -1,9 +1,9 @@
 # cmk_livestatus_trafficlight
-Trafficlight-style status display for CheckMK monitoring solution
+Trafficlight-style status display for the CheckMK monitoring solution
 
 
 # CheckMK Livestatus API
-... is interface to the CheckMK in memory stateDB
+... is the interface to the CheckMK in memory stateDB.
 A description can be found here:
 https://checkmk.com/cms_livestatus.html
 
@@ -133,7 +133,7 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NTg2OTcyNiwtMTY2OTUxOTcxOSwtMT
-U0ODc2MDE5MywtMTg4MTIxNDI2OCwxNTgyMjgzNzE4LDEwNDgx
-OTk5OTNdfQ==
+eyJoaXN0b3J5IjpbLTIwNTgzNjgxMzYsLTE2Njk1MTk3MTksLT
+E1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4
+MTk5OTkzXX0=
 -->
