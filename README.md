@@ -89,11 +89,12 @@ https://github.com/nvl1109/orangepi_zero_gpio
 I've decided to choose a 12V/0.5A feeding via Ethernet cable spare pins. This should be enough for 5 to 15 meters cable length depending on the cable quality. If you need to provide the power over a longer cable, you should use a higher voltage. But ATTENTION: two resistors must be removed from the OrangePi Zero board. They are 750 Ohms parallel to the PoE input and would overheat at such high voltages. See documentation. I've removed them anyway.
 A stepdown (buck) converter is needed to provide the neccesary 5V for the OrangePi Zero.
 
-### Wireing:
+### Wiring:
 
+A passive PoE injector is used to 
 The PoE pin of Orangepizero is wired to the input of the stepdown converter. The output of of the stepdown converter is wired to the 5V pin of the Orangepizero.
 
-Power consumtion: The maximum power consumtion I saw at 12V side was 3.4 Watt during bootup when all LEDs (external, trafficlight) are on. After bootup a maximum of 1.6 Watts is drawn when all LEDs are on.
+
 Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck converter as a protection in case of wrong polarity.
 ```
 +12V PoE o----=>|----o +Vin buck converter +5V Vout o----------o +5V OrangePi Zero
@@ -101,6 +102,8 @@ Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck c
              
   0V PoE o-----------o -Vin buck converter -5V Vout o----------o GND OrangePi Zero
 ```
+Power consumtion: The maximum power consumtion I saw at 12V side was 3.4 Watt during bootup when all LEDs (external, trafficlight) are on. After bootup a maximum of 1.6 Watts is drawn when all LEDs are on.
+
 Here I bought the buck converter (no affiliate link ;-)  ):
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
 
@@ -126,7 +129,7 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzYzNDE5MDYsLTE2Njk1MTk3MTksLT
+eyJoaXN0b3J5IjpbLTEzNzE5MTAwMjMsLTE2Njk1MTk3MTksLT
 E1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4
 MTk5OTkzXX0=
 -->
