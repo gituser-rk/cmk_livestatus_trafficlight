@@ -59,9 +59,9 @@ Three queries are necessary:
 2) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged (and not in scheduled maintanance) in status CRITICAL
 3) check if services, which relates to hosts in certain 'contact_groups' are unacknowledged (and not in scheduled maintanance) in status WARN
 
- 1. st Query result is >0 = red Light on
- 2. nd Query result is >0 = red Light on
- 3. rd Query result is >0 = yellow Light on
+ 1. st Query's result is >0 = red Light on
+ 2. nd Query's result is >0 = red Light on
+ 3. rd Query's result is >0 = yellow Light on
 
 If none of the queries returns a number greater 0, the green light is turned on and all other lights are turned off.
 
@@ -122,6 +122,6 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzAxNDMwODMsLTE1NDg3NjAxOTMsLT
-E4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbODgyMjk4MTI5LC0xNTQ4NzYwMTkzLC0xOD
+gxMjE0MjY4LDE1ODIyODM3MTgsMTA0ODE5OTk5M119
 -->
