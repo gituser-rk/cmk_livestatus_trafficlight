@@ -7,8 +7,8 @@ https://checkmk.com/cms_livestatus.html
 
 
 # Platform
-Linux board with i/o ports and LAN interface as platform. For me a wired LAN interface was important. 
-This is the board I used:
+Linux board with i/o ports and LAN interface as platform. For me a wired LAN interface and a small form factor was important. 
+This is the board I've used:
 
 http://www.orangepi.org/orangepizero/
 
@@ -114,5 +114,5 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0ODE5OTk5M119
+eyJoaXN0b3J5IjpbNTkxMzI2MDY5LDEwNDgxOTk5OTNdfQ==
 -->
