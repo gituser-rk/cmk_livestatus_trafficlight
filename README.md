@@ -1,5 +1,6 @@
 # cmk_livestatus_trafficlight
 Trafficlight-style status display for the CheckMK monitoring solution
+
 ![Pic11](pics/11.jpg)
 ![Pic12](pics/12.jpg)
 
@@ -134,7 +135,7 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNDk0MTM1MCwtMjA1ODM2ODEzNiwtMT
-Y2OTUxOTcxOSwtMTU0ODc2MDE5MywtMTg4MTIxNDI2OCwxNTgy
-MjgzNzE4LDEwNDgxOTk5OTNdfQ==
+eyJoaXN0b3J5IjpbMTAzMjA1NjMxMiwxNTA0OTQxMzUwLC0yMD
+U4MzY4MTM2LC0xNjY5NTE5NzE5LC0xNTQ4NzYwMTkzLC0xODgx
+MjE0MjY4LDE1ODIyODM3MTgsMTA0ODE5OTk5M119
 -->
