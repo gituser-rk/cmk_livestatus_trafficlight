@@ -60,7 +60,8 @@ If none of the queries returns a number greater 0, the green light is turned on 
 # Enable Livestatus
 Enable Livestatus API access in CheckMK from network:
 
-omd stop;omd config set LIVESTATUS_TCP on;omd config set LIVESTATUS_TCP_ONLY_FROM '172.18.1.91';omd start
+    [site]
+    omd stop;omd config set LIVESTATUS_TCP on;omd config set LIVESTATUS_TCP_ONLY_FROM '172.18.1.91';omd start
 
 ## GPIO
 
@@ -96,7 +97,8 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 ![Pic4](pics/4.jpg)
 
 ## More Pictures
-Here are some more pictur
+Here are some more pictures taken during the realisation of the project.
+
 ![Pic1](pics/1.jpg)
 (The trafficlight was delivered with a tiny microcontroller and driver transistors at the LED board)
 
@@ -111,5 +113,5 @@ Here are some more pictur
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzU2NTQ2Nl19
+eyJoaXN0b3J5IjpbMTM0ODEzNTcxMl19
 -->
