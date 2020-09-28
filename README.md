@@ -19,6 +19,7 @@ http://www.orangepi.org/orangepizero/
 ## OS
 I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
+
 Downloaded and installed at a Sandisk 16GB uSD card as described there.
 Version installed:
 VERSION="20.04.1 LTS (Focal Fossa)"
@@ -135,7 +136,7 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMjA1NjMxMiwxNTA0OTQxMzUwLC0yMD
-U4MzY4MTM2LC0xNjY5NTE5NzE5LC0xNTQ4NzYwMTkzLC0xODgx
-MjE0MjY4LDE1ODIyODM3MTgsMTA0ODE5OTk5M119
+eyJoaXN0b3J5IjpbNjk0MDQzMjEwLDE1MDQ5NDEzNTAsLTIwNT
+gzNjgxMzYsLTE2Njk1MTk3MTksLTE1NDg3NjAxOTMsLTE4ODEy
+MTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
 -->
