@@ -113,7 +113,7 @@ Use the fixed-output version. The ones with variable output are unreliable!
 ![Pic4](pics/4.jpg)
 
 ## Case
-If you like you can use the file [Ampelfuss.stl](https://github.com/gituser-rk/cmk_livestatus_trafficlight/blob/master/Ampelfuss.stl "Ampelfuss.stl") as 3D print template for the new base 
+If you like you can use the file [Ampelfuss.stl](https://github.com/gituser-rk/cmk_livestatus_trafficlight/blob/master/Ampelfuss.stl "Ampelfuss.stl") as 3D print template for the new base of the Trafficlight holding the OrangePi Zero.
 
 ## More Pictures
 Here are some more pictures taken during the realisation of the project.
@@ -132,7 +132,7 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTU1ODQ4NTgsLTE2Njk1MTk3MTksLT
-E1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4
-MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbMTg4NDg0ODc2NiwtMTY2OTUxOTcxOSwtMT
+U0ODc2MDE5MywtMTg4MTIxNDI2OCwxNTgyMjgzNzE4LDEwNDgx
+OTk5OTNdfQ==
 -->
