@@ -17,6 +17,7 @@ I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
 Downloaded and installed at a Sandisk 16GB uSD card as described there.
 Version installed:
+VERSION="20.04.1 LTS (Focal Fossa)"
 PRETTY_NAME="Armbian 20.08 Focal"
 VERSION_ID="20.04"
 
@@ -120,6 +121,6 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMD
-Q4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbLTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMT
+U4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
 -->
