@@ -138,10 +138,10 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic7](pics/7.jpg)
 
 ![Pic8](pics/8.jpg)
-
+(In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTYyMzQ1ODMsMTExMzE5ODQ2MSwtMj
-U4NzMxMjkwLDE1MDQ5NDEzNTAsLTIwNTgzNjgxMzYsLTE2Njk1
-MTk3MTksLTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4Mz
-cxOCwxMDQ4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbMTYxNzg5NDcwOSwtMTk1NjIzNDU4MywxMT
+EzMTk4NDYxLC0yNTg3MzEyOTAsMTUwNDk0MTM1MCwtMjA1ODM2
+ODEzNiwtMTY2OTUxOTcxOSwtMTU0ODc2MDE5MywtMTg4MTIxND
+I2OCwxNTgyMjgzNzE4LDEwNDgxOTk5OTNdfQ==
 -->
