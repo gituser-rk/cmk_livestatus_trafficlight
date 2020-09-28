@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Program for accessing CheckMK Livestatus over network and switching a traffic light depending of the query results
 # recommended location of the program: /opt/trafficlight/checkstatus.py
+
 import socket, os, sys
 clear = lambda: os.system('clear')
 
