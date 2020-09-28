@@ -32,12 +32,6 @@ root@orangepizero:~# python3 setup.py install
 ## Python program
 Copy the Python program "checkstatus.py" to the folder /opt/trafficlight.
 
-or:
-
-    root@orangepizero:~# cd /opt/trafficlight/ 
-    root@orangepizero:~# git clone https://github.com/gituser_rk/# **[cmk_livestatus_trafficlight](https://github.com/gituser-rk/cmk_livestatus_trafficlight)**.git
-
-
 /opt/trafficlight/checkstatus.py
 
 Tasks of the program: Query Livestatus, calculate and set LED Status
@@ -121,5 +115,5 @@ https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-outpu
 
 ![Pic8](pics/8.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDU5NDUwMl19
+eyJoaXN0b3J5IjpbLTU4NTk0ODIyMl19
 -->
