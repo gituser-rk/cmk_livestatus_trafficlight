@@ -46,7 +46,8 @@ Installed Python version at day of writing: Python 3.8.2
 
 Copy the Python program "checkstatus.py" to the folder /opt/trafficlight and make it executable:
 
-chmod +x /opt/trafficlight/checkstatus.py
+    root@orangepizero:~#
+    chmod +x /opt/trafficlight/checkstatus.py
 
 Tasks of the program: 
 
@@ -57,6 +58,7 @@ Tasks of the program:
 ### Autostart
 Put the following two lines in /etc/rc.local (above 'exit 0' !!!):
 ```
+root@orangepizero:~#
 cd /opt/trafficlight/
 ./checkstatus.py
 ```
@@ -145,9 +147,9 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NDgyMDAwNiwtMjkzODI5MTM2LC0yOD
-U0MzYyNjMsLTE5NTYyMzQ1ODMsMTExMzE5ODQ2MSwtMjU4NzMx
-MjkwLDE1MDQ5NDEzNTAsLTIwNTgzNjgxMzYsLTE2Njk1MTk3MT
-ksLTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwx
-MDQ4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbLTIwNjkxOTg2MjYsLTI5MzgyOTEzNiwtMj
+g1NDM2MjYzLC0xOTU2MjM0NTgzLDExMTMxOTg0NjEsLTI1ODcz
+MTI5MCwxNTA0OTQxMzUwLC0yMDU4MzY4MTM2LC0xNjY5NTE5Nz
+E5LC0xNTQ4NzYwMTkzLC0xODgxMjE0MjY4LDE1ODIyODM3MTgs
+MTA0ODE5OTk5M119
 -->
