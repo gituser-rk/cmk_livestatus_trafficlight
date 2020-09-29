@@ -20,14 +20,14 @@ I've chosen Armbian as OS:
 https://www.armbian.com/orange-pi-zero/
 
 Downloaded and installed at a Sandisk 16GB uSD card as described there.
-Version installed:
+Installed Armbian version:
 
     VERSION="20.04.1 LTS (Focal Fossa)"
     PRETTY_NAME="Armbian 20.08 Focal"
     VERSION_ID="20.04"
 
 ### Preparation
-update linux system and compile the GPIO library
+update the Linux system and compile the GPIO library. 
 ```
 root@orangepizero:~# 
 armbian-config
@@ -147,7 +147,7 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MDk5ODQ1NywtNDcwNzY4MDQ0LC0yMD
+eyJoaXN0b3J5IjpbLTMyNDA4OTIzNiwtNDcwNzY4MDQ0LC0yMD
 Y5MTk4NjI2LC0yOTM4MjkxMzYsLTI4NTQzNjI2MywtMTk1NjIz
 NDU4MywxMTEzMTk4NDYxLC0yNTg3MzEyOTAsMTUwNDk0MTM1MC
 wtMjA1ODM2ODEzNiwtMTY2OTUxOTcxOSwtMTU0ODc2MDE5Mywt
