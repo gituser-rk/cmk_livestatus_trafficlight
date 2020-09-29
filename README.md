@@ -57,7 +57,6 @@ Tasks of the program:
 ### Autostart
 Put the following two lines in /etc/rc.local (above 'exit 0' !!!):
 ```
-root@orangepizero:~#
 cd /opt/trafficlight/
 ./checkstatus.py
 ```
@@ -147,10 +146,10 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MzYwMjkwMywtMTA4NDM4ODc5NSwtND
-cwNzY4MDQ0LC0yMDY5MTk4NjI2LC0yOTM4MjkxMzYsLTI4NTQz
-NjI2MywtMTk1NjIzNDU4MywxMTEzMTk4NDYxLC0yNTg3MzEyOT
-AsMTUwNDk0MTM1MCwtMjA1ODM2ODEzNiwtMTY2OTUxOTcxOSwt
-MTU0ODc2MDE5MywtMTg4MTIxNDI2OCwxNTgyMjgzNzE4LDEwND
-gxOTk5OTNdfQ==
+eyJoaXN0b3J5IjpbLTEyMzI5MzQ5MjUsLTEwODQzODg3OTUsLT
+Q3MDc2ODA0NCwtMjA2OTE5ODYyNiwtMjkzODI5MTM2LC0yODU0
+MzYyNjMsLTE5NTYyMzQ1ODMsMTExMzE5ODQ2MSwtMjU4NzMxMj
+kwLDE1MDQ5NDEzNTAsLTIwNTgzNjgxMzYsLTE2Njk1MTk3MTks
+LTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMD
+Q4MTk5OTkzXX0=
 -->
