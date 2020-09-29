@@ -48,8 +48,11 @@ Copy the Python program "checkstatus.py" to the folder /opt/trafficlight.
 
 /opt/trafficlight/checkstatus.py
 
-Tasks of the program: Query Livestatus, calculate and set LED Status. 
-Loop every [INTERVAL] seconds.
+Tasks of the program: 
+
+ - Query Livestatus
+ - calculate and set LED Status
+ - Loop every [INTERVAL] seconds.
 
 ### Autostart
 Put the following two lines in /etc/rc.local (above 'exit 0' !!!):
@@ -142,9 +145,9 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0NTA5MjIzLC0yODU0MzYyNjMsLTE5NT
-YyMzQ1ODMsMTExMzE5ODQ2MSwtMjU4NzMxMjkwLDE1MDQ5NDEz
-NTAsLTIwNTgzNjgxMzYsLTE2Njk1MTk3MTksLTE1NDg3NjAxOT
-MsLTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbLTI5MzgyOTEzNiwtMjg1NDM2MjYzLC0xOT
+U2MjM0NTgzLDExMTMxOTg0NjEsLTI1ODczMTI5MCwxNTA0OTQx
+MzUwLC0yMDU4MzY4MTM2LC0xNjY5NTE5NzE5LC0xNTQ4NzYwMT
+kzLC0xODgxMjE0MjY4LDE1ODIyODM3MTgsMTA0ODE5OTk5M119
 
 -->
