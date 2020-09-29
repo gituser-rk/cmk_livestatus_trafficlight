@@ -5,15 +5,14 @@ Trafficlight-style status display for the CheckMK monitoring solution
 ![Pic12](pics/12.jpg)
 
 # CheckMK Livestatus API
-... is the interface to the CheckMK in memory stateDB.
+... is the interface to the CheckMK in memory stateDB used to gather the status data.
 A description can be found here:
 https://checkmk.com/cms_livestatus.html
 
 
 # Platform
-Linux board with i/o ports and LAN interface as platform. For me a wired LAN interface and a small form factor was important. 
+A Linux board with tree i/o ports and a LAN interface is used as platform. For me a wired LAN interface and a small form factor was important. 
 This is the board I've used:
-
 http://www.orangepi.org/orangepizero/
 
 ## OS
@@ -148,9 +147,9 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MDc2ODA0NCwtMjA2OTE5ODYyNiwtMj
-kzODI5MTM2LC0yODU0MzYyNjMsLTE5NTYyMzQ1ODMsMTExMzE5
-ODQ2MSwtMjU4NzMxMjkwLDE1MDQ5NDEzNTAsLTIwNTgzNjgxMz
-YsLTE2Njk1MTk3MTksLTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgs
-MTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
+eyJoaXN0b3J5IjpbMTk1MDk5ODQ1NywtNDcwNzY4MDQ0LC0yMD
+Y5MTk4NjI2LC0yOTM4MjkxMzYsLTI4NTQzNjI2MywtMTk1NjIz
+NDU4MywxMTEzMTk4NDYxLC0yNTg3MzEyOTAsMTUwNDk0MTM1MC
+wtMjA1ODM2ODEzNiwtMTY2OTUxOTcxOSwtMTU0ODc2MDE5Mywt
+MTg4MTIxNDI2OCwxNTgyMjgzNzE4LDEwNDgxOTk5OTNdfQ==
 -->
