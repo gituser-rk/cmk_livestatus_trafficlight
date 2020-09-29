@@ -105,7 +105,7 @@ A stepdown (buck) converter is needed to provide the neccesary 5V for the Orange
 
 A passive PoE injector is used to provide the 12V.
 
-The PoE pin of Orangepizero is wired to the input of the stepdown converter. The output of of the stepdown converter is wired to the 5V pin of the Orangepizero.
+The PoE pin of the Orangepi Zero is wired to the input of the stepdown converter. The output of of the stepdown converter is wired to the 5V pin of the Orangepizero.
 
 Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck converter as a protection in case of wrong polarity.
 ```
@@ -114,7 +114,7 @@ Also, I've added a Diode 1N4007 in series between 12V+ PoE and Vin of the buck c
              
   0V PoE o-----------o -Vin buck converter -5V Vout o----------o GND OrangePi Zero
 ```
-Power consumtion: The maximum power consumtion I saw at the 12V side was 3.4 Watt during bootup when all LEDs (external, trafficlight) are on. After bootup a maximum of 1.6 Watts is drawn when all LEDs are on.
+Power consumtion: The maximum power consumtion I saw at the 12V side was 3.4 Watt during bootup when all LEDs (external, trafficlight) are on. After bootup a maximum of 1.6 Watts is drawn if all LEDs are on.
 
 Here I bought the buck converter (no affiliate link ;-)  ):
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
@@ -148,7 +148,7 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMjAwNTM2NCwtMjA2OTE5ODYyNiwtMj
+eyJoaXN0b3J5IjpbLTQ3MDc2ODA0NCwtMjA2OTE5ODYyNiwtMj
 kzODI5MTM2LC0yODU0MzYyNjMsLTE5NTYyMzQ1ODMsMTExMzE5
 ODQ2MSwtMjU4NzMxMjkwLDE1MDQ5NDEzNTAsLTIwNTgzNjgxMz
 YsLTE2Njk1MTk3MTksLTE1NDg3NjAxOTMsLTE4ODEyMTQyNjgs
