@@ -1,6 +1,6 @@
 # cmk_livestatus_trafficlight
-Trafficlight-style status display for the CheckMK monitoring solution
-
+A Trafficlight-style status display for the  monitoring solution
+CheckMK
 ![Pic11](pics/11.jpg)
 ![Pic12](pics/12.jpg)
 
@@ -27,7 +27,7 @@ Installed Armbian version:
     VERSION_ID="20.04"
 
 ### Preparation
-update the Linux system and compile the GPIO library. The used version from "nvl1109" is specifically adapted to the OrangePi Zero.
+update the Linux system and compile the GPIO library. The used version from "nvl1109" is a adapted to the OrangePi Zero.
 ```
 root@orangepizero:~# 
 armbian-config
@@ -147,7 +147,7 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDg0MDQ1MywtMTA4NDM4ODc5NSwtND
+eyJoaXN0b3J5IjpbMTA3OTM4NjE3NywtMTA4NDM4ODc5NSwtND
 cwNzY4MDQ0LC0yMDY5MTk4NjI2LC0yOTM4MjkxMzYsLTI4NTQz
 NjI2MywtMTk1NjIzNDU4MywxMTEzMTk4NDYxLC0yNTg3MzEyOT
 AsMTUwNDk0MTM1MCwtMjA1ODM2ODEzNiwtMTY2OTUxOTcxOSwt
