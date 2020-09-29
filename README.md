@@ -1,6 +1,6 @@
 # cmk_livestatus_trafficlight
-A Trafficlight-style status display for the  monitoring solution
-CheckMK
+A Trafficlight-style status display for the [CheckMK](https://checkmk.com/) monitoring solution.
+
 ![Pic11](pics/11.jpg)
 ![Pic12](pics/12.jpg)
 
@@ -11,7 +11,7 @@ https://checkmk.com/cms_livestatus.html
 
 
 # Platform
-A Linux board with tree i/o ports and a LAN interface is used as platform. For me a wired LAN interface and a small form factor was important. 
+A Linux board with three i/o ports and a LAN interface is used as platform. For me a wired LAN interface and a small form factor was important. 
 This is the board I've used:
 http://www.orangepi.org/orangepizero/
 
@@ -147,7 +147,7 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3OTM4NjE3NywtMTA4NDM4ODc5NSwtND
+eyJoaXN0b3J5IjpbMTM1MzYwMjkwMywtMTA4NDM4ODc5NSwtND
 cwNzY4MDQ0LC0yMDY5MTk4NjI2LC0yOTM4MjkxMzYsLTI4NTQz
 NjI2MywtMTk1NjIzNDU4MywxMTEzMTk4NDYxLC0yNTg3MzEyOT
 AsMTUwNDk0MTM1MCwtMjA1ODM2ODEzNiwtMTY2OTUxOTcxOSwt
