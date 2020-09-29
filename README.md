@@ -27,7 +27,7 @@ Installed Armbian version:
     VERSION_ID="20.04"
 
 ### Preparation
-update the Linux system and compile the GPIO library. 
+update the Linux system and compile the GPIO library. The used version from "nvl1109" is adapted to the OrangePi Zero.
 ```
 root@orangepizero:~# 
 armbian-config
@@ -147,9 +147,9 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNDA4OTIzNiwtNDcwNzY4MDQ0LC0yMD
-Y5MTk4NjI2LC0yOTM4MjkxMzYsLTI4NTQzNjI2MywtMTk1NjIz
-NDU4MywxMTEzMTk4NDYxLC0yNTg3MzEyOTAsMTUwNDk0MTM1MC
-wtMjA1ODM2ODEzNiwtMTY2OTUxOTcxOSwtMTU0ODc2MDE5Mywt
-MTg4MTIxNDI2OCwxNTgyMjgzNzE4LDEwNDgxOTk5OTNdfQ==
+eyJoaXN0b3J5IjpbLTEwODQzODg3OTUsLTQ3MDc2ODA0NCwtMj
+A2OTE5ODYyNiwtMjkzODI5MTM2LC0yODU0MzYyNjMsLTE5NTYy
+MzQ1ODMsMTExMzE5ODQ2MSwtMjU4NzMxMjkwLDE1MDQ5NDEzNT
+AsLTIwNTgzNjgxMzYsLTE2Njk1MTk3MTksLTE1NDg3NjAxOTMs
+LTE4ODEyMTQyNjgsMTU4MjI4MzcxOCwxMDQ4MTk5OTkzXX0=
 -->
