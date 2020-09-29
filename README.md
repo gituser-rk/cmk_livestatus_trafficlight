@@ -90,7 +90,7 @@ I've used these pins as output for the LEDs:
 
 https://github.com/nvl1109/orangepi_zero_gpio
 
-I've soldered a 7-pin male header to the OrangePi Zero
+I've soldered a 7-pin male header to the OrangePi Zero and the female opposite to the flexible cables.
 
 ![Pic9](pics/9.jpg)
 
@@ -148,7 +148,7 @@ Here are some more pictures taken during the realisation of the project.
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyODA1MzEzNywtMTA4NDM4ODc5NSwtND
+eyJoaXN0b3J5IjpbMTI0MTcwMzcyMywtMTA4NDM4ODc5NSwtND
 cwNzY4MDQ0LC0yMDY5MTk4NjI2LC0yOTM4MjkxMzYsLTI4NTQz
 NjI2MywtMTk1NjIzNDU4MywxMTEzMTk4NDYxLC0yNTg3MzEyOT
 AsMTUwNDk0MTM1MCwtMjA1ODM2ODEzNiwtMTY2OTUxOTcxOSwt
