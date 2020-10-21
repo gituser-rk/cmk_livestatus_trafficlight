@@ -3,12 +3,15 @@
 # recommended location of the program: /opt/trafficlight/checkstatus.py
 
 import socket, os, sys
+import sdnotify
 clear = lambda: os.system('clear')
 
 if not os.getegid() == 0:
     sys.exit('Script must run as root')
 # set to True for debug output, otherwise to False
 debug = False
+
+n = sdnotify.SystemdNotifier()
 
 # for local/remote sites: TCP address/port for CheckMK Livestatus socket
 HOST = 'omd.domain.tld'
@@ -96,6 +99,7 @@ try:
             print ('LED Red     state: ', stateR)
             print ('LED Yellow  state: ', stateY)
             print ('LED Green   state: ', stateG)
+        n.notify("WATCHDOG=1")
         sleep(INTERVAL)
 except KeyboardInterrupt:
    print ("Goodbye.")
