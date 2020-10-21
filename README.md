@@ -34,6 +34,7 @@ armbian-config
 apt update
 apt upgrade
 apt install python3-dev
+apt install python3-sdnotify #for watchdog
 mkdir /opt/trafficlight/
 cd /opt/trafficlight/
 git clone https://github.com/nvl1109/orangepi_zero_gpio.git
@@ -55,10 +56,31 @@ Tasks of the program:
  - Loop every [INTERVAL] seconds.
 
 ### Autostart
-Put the following two lines in /etc/rc.local (above 'exit 0' !!!):
+created a systemd service with watchdog functionality:
+/lib/systemd/system/trafficlight.service
 ```
-cd /opt/trafficlight/
-./checkstatus.py
+[Unit]
+Description=Trafficlight service
+After=multi-user.target
+[Service]
+#Type=simple
+WatchdogSec=30s
+Restart=on-failure
+StartLimitInterval=5min
+StartLimitBurst=4
+StartLimitAction=reboot-force
+WorkingDirectory=/opt/trafficlight
+ExecStart=/usr/bin/python3 /opt/trafficlight/checkstatus.py
+[Install]
+WantedBy=multi-user.target
+
+```
+
+Enable and start:
+```
+sudo systemctl daemon-reload
+sudo systemctl enable trafficlight
+sudo systemctl start trafficlight
 ```
 
 ## Livestatus Queries
