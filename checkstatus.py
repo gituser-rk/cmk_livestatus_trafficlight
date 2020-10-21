@@ -99,7 +99,7 @@ try:
             print ('LED Red     state: ', stateR)
             print ('LED Yellow  state: ', stateY)
             print ('LED Green   state: ', stateG)
-        n.notify("WATCHDOG=1")
+        n.notify("WATCHDOG=1") #tell the systemd watchdog that we're alive
         sleep(INTERVAL)
 except KeyboardInterrupt:
    print ("Goodbye.")
