@@ -165,7 +165,7 @@ Here are some more pictures taken during the realisation of the project.
 (LED board remounted at backside)
 
 ![Pic7](pics/7.jpg)
-(View inside the head, baseplate mounted)
+(View inside the head, baseplate mounted. Originally it had a MicroUSB port and I've extended the smaller hole to a rectangular to fit the RJ45 plug.)
 
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
