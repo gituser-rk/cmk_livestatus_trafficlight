@@ -142,7 +142,7 @@ Here I bought the buck converter (no affiliate link ;-)  ):
 https://www.electrodragon.com/product/dc-dc-step-power-module-mp1584-fixed-output/
 
 ![Pic0](pics/stepdown.PNG)
-Use the fixed-output version. The ones with variable output are unreliable!
+Use the fixed-output voltage version. These with variable output voltage are unreliable (at least the cheap ones).
 
 ![Pic4](pics/4.jpg)
 
