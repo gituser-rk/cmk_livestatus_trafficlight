@@ -9,14 +9,15 @@ clear = lambda: os.system('clear')
 if not os.getegid() == 0:
     sys.exit('Script must run as root')
 # set to True for debug output, otherwise to False
+#debug = True
 debug = False
 
 n = sdnotify.SystemdNotifier()
 
 # for local/remote sites: TCP address/port for CheckMK Livestatus socket
-HOST = 'omd.domain.tld'
+HOST = 'fqdn.of.checkmk'
 PORT = 6557
-# refresh interval in seconds
+# refresh (polling) interval in seconds
 INTERVAL = 10
 
 from time import sleep
@@ -33,7 +34,7 @@ gpio.setcfg(ledY, gpio.OUTPUT)
 gpio.setcfg(ledG, gpio.OUTPUT)
 
 #count of unacknowledged hosts not in scheduled downtime in state CRITICAL:
-query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\n\n"
+query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\nFilter: acknowledged = 0\nFilter: host_scheduled_downtime_depth = 0\n\n"
 #count of unacknowledged service errors not in scheduled downtime in state CRITICAL:
 query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
 #count of unacknowledged service errors not in scheduled downtime in state WARNING:
