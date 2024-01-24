@@ -34,8 +34,11 @@ gpio.setcfg(ledY, gpio.OUTPUT)
 gpio.setcfg(ledG, gpio.OUTPUT)
 
 #count of unacknowledged hosts not in scheduled downtime in state CRITICAL:
+#query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\nFilter: acknowledged != 0\n\n"
 query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\nFilter: acknowledged = 0\nFilter: host_scheduled_downtime_depth = 0\n\n"
+
 #count of unacknowledged service errors not in scheduled downtime in state CRITICAL:
+#query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
 query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
 #count of unacknowledged service errors not in scheduled downtime in state WARNING:
 query3 = "GET services\nStats: state = 1\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
