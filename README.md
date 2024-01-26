@@ -1,13 +1,13 @@
 # cmk_livestatus_trafficlight
-A Trafficlight-style status display for the [CheckMK](https://checkmk.com/) monitoring solution.
+A Trafficlight-style status display for the [Checkmk](https://checkmk.com/) monitoring solution.
 
 ![Pic11](pics/11.jpg)
 ![Pic12](pics/12.jpg)
 
-# CheckMK Livestatus API
-... is the interface to the CheckMK in memory stateDB used to gather the status data.
+# Checkmk Livestatus API
+... is the interface to the Checkmk in memory stateDB used to gather the status data.
 A description can be found here:
-https://checkmk.com/cms_livestatus.html
+https://docs.checkmk.com/latest/en/livestatus.html
 
 
 # Platform
@@ -96,7 +96,7 @@ Three queries are necessary:
 If none of the queries returns a number greater 0, the green light is turned on and all other lights are turned off.
 
 # Enable Livestatus
-Enable Livestatus API access in CheckMK from network (TCP/IP):
+Enable Livestatus API access in Checkmk from network (TCP/IP):
 
     [sitename-user]@checkmk server:~#
     omd stop;omd config set LIVESTATUS_TCP on;omd config set LIVESTATUS_TCP_ONLY_FROM '172.18.1.91';omd start
