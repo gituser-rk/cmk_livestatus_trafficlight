@@ -169,6 +169,9 @@ Here are some more pictures taken during the realisation of the project.
 
 ![Pic8](pics/8.jpg)
 (In action prior to mounting the base plate)
+![Pic9](pics/injector.png)
+(passive PoE injector used)
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTEyNTg5NDAxNTIsMjg2MDkwNzgsLTEwOD
 QzODg3OTUsLTQ3MDc2ODA0NCwtMjA2OTE5ODYyNiwtMjkzODI5
