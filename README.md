@@ -58,6 +58,7 @@ Tasks of the program:
 ### Autostart
 created a systemd service with watchdog functionality:
 /lib/systemd/system/trafficlight.service
+or for SLES: /usr/lib/systemd/system/trafficlight.service
 ```
 [Unit]
 Description=Trafficlight service
