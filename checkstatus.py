@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
 # Program for accessing CheckMK Livestatus over network and switching a traffic light depending of the query results
 # recommended location of the program: /opt/trafficlight/checkstatus.py
-
 import socket, os, sys
 import sdnotify
-clear = lambda: os.system('clear')
-
 if not os.getegid() == 0:
     sys.exit('Script must run as root')
 # set to True for debug output, otherwise to False
 #debug = True
 debug = False
+clear = lambda: os.system('clear')
 
 n = sdnotify.SystemdNotifier()
 
 # for local/remote sites: TCP address/port for CheckMK Livestatus socket
 HOST = 'fqdn.of.checkmk'
 PORT = 6557
-# refresh (polling) interval in seconds
+# check interval in seconds
 INTERVAL = 10
 
 from time import sleep
@@ -34,12 +32,14 @@ gpio.setcfg(ledY, gpio.OUTPUT)
 gpio.setcfg(ledG, gpio.OUTPUT)
 
 #count of unacknowledged hosts not in scheduled downtime in state CRITICAL:
-query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\nFilter: acknowledged = 0\nFilter: host_scheduled_downtime_depth = 0\n\n"
+#query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\nFilter: acknowledged != 0\n\n"
+query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\n\n"
 
 #count of unacknowledged service errors not in scheduled downtime in state CRITICAL:
-query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
+#query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
+query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: host_scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
 #count of unacknowledged service errors not in scheduled downtime in state WARNING:
-query3 = "GET services\nStats: state = 1\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
+query3 = "GET services\nStats: state = 1\nFilter: scheduled_downtime_depth = 0\nFilter: host_scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
 
 try:
     print ("Press CTRL+C to exit")
@@ -101,7 +101,7 @@ try:
             print ('LED Red     state: ', stateR)
             print ('LED Yellow  state: ', stateY)
             print ('LED Green   state: ', stateG)
-        n.notify("WATCHDOG=1") #tell the systemd watchdog that we're alive
+        n.notify("WATCHDOG=1")  #tell the systemd watchdog that we're alive
         sleep(INTERVAL)
 except KeyboardInterrupt:
    print ("Goodbye.")
