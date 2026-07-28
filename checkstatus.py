@@ -3,21 +3,86 @@
 # recommended location of the program: /opt/trafficlight/checkstatus.py
 import socket, os, sys
 import sdnotify
+import ssl
 if not os.getegid() == 0:
     sys.exit('Script must run as root')
+
 # set to True for debug output, otherwise to False
 #debug = True
 debug = False
+
 clear = lambda: os.system('clear')
 
 n = sdnotify.SystemdNotifier()
 
 # for local/remote sites: TCP address/port for CheckMK Livestatus socket
-HOST = 'fqdn.of.checkmk'
-PORT = 6557
+#HOST = '172.20.20.92'
+HOST = 'omd.somwhere.local'
+PORT = 6558
 # check interval in seconds
 INTERVAL = 10
 
+USE_TLS = None
+
+def _read_response(conn):
+    response = b""
+    while True:
+        data = conn.recv(4096)
+        if not data:
+            break
+        response += data
+    return response.decode("utf-8").strip()
+def livestatus_query(host, port, query):
+    global USE_TLS
+    # TLS detection only at first call
+    #
+    if USE_TLS is None:
+        try:
+            context = ssl.create_default_context()
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+
+            with socket.create_connection((host, port), timeout=5) as sock:
+                with context.wrap_socket(sock, server_hostname=host):
+                    pass
+            USE_TLS = True
+            print("Livestatus: TLS detected")
+        except (ssl.SSLError,
+                ssl.SSLEOFError,
+                ConnectionResetError,
+                OSError) as e:
+            USE_TLS = False
+            print(f"Livestatus: no TLS ({e})")
+    # TLS connection
+    #
+    if USE_TLS:
+        try:
+            context = ssl.create_default_context()
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+
+            with socket.create_connection((host, port), timeout=10) as sock:
+                with context.wrap_socket(sock, server_hostname=host) as tls_sock:
+                    tls_sock.sendall(query.encode("utf-8"))
+                    return _read_response(tls_sock)
+
+        except Exception as e:
+            print(f"Livestatus TLS error: {e}")
+            raise
+    # Normal TCP connection
+    #
+    try:
+        with socket.create_connection((host, port), timeout=10) as sock:
+            sock.sendall(query.encode("utf-8"))
+            return _read_response(sock)
+
+    except Exception as e:
+        print(f"Livestatus TCP error: {e}")
+        raise
+        #return "0"
+
+clear = lambda: os.system('clear')
+n = sdnotify.SystemdNotifier()
 from time import sleep
 from pyA20.gpio import gpio
 from pyA20.gpio import port
@@ -32,50 +97,29 @@ gpio.setcfg(ledY, gpio.OUTPUT)
 gpio.setcfg(ledG, gpio.OUTPUT)
 
 #count of unacknowledged hosts not in scheduled downtime in state CRITICAL:
-#query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\nFilter: acknowledged != 0\n\n"
 query1 = "GET hosts\nStats: state > 0\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: host_acknowledged = 0\n\n"
-
 #count of unacknowledged service errors not in scheduled downtime in state CRITICAL:
-#query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
 query2 = "GET services\nStats: state = 2\nFilter: scheduled_downtime_depth = 0\nFilter: host_scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
 #count of unacknowledged service errors not in scheduled downtime in state WARNING:
 query3 = "GET services\nStats: state = 1\nFilter: scheduled_downtime_depth = 0\nFilter: host_scheduled_downtime_depth = 0\nFilter: contact_groups ~ Netzwerk|Linux\nFilter: service_acknowledged = 0\n\n"
+
+if USE_TLS:
+    print("Livestatus connection: TLS")
+else:
+    print("Livestatus connection: TCP")
 
 try:
     print ("Press CTRL+C to exit")
     # main loop
     while True:
-        ### start query 1
-        # connect to Livestatus
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((HOST, PORT))
-        # send our request and let Livestatus know we're done
-        s.sendall(query1.encode('utf-8'))
-        # read reply
-        reply1 = s.recv(1024)
-        # close connection
-        s.close()
-        ### end query 1
-        ### start query 2
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((HOST, PORT))
-        s.sendall(query2.encode('utf-8'))
-        reply2 = s.recv(1024)
-        s.close()
-        ### end query 2
-        ### start query 3
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((HOST, PORT))
-        s.sendall(query3.encode('utf-8'))
-        reply3 = s.recv(1024)
-        s.close()
-        ### end query 3
-
+        reply1 = livestatus_query(HOST, PORT, query1)
+        reply2 = livestatus_query(HOST, PORT, query2)
+        reply3 = livestatus_query(HOST, PORT, query3)
         if debug == True:
             clear()
-            print('   Hosts in state CRITICAL: ', reply1.decode('utf-8'))
-            print('Services in state CRITICAL: ', reply2.decode('utf-8'))
-            print(' Services in state WARNING: ', reply3.decode('utf-8'))
+            print('   Hosts in state CRITICAL: ', reply1)
+            print('Services in state CRITICAL: ', reply2)
+            print(' Services in state WARNING: ', reply3)
 
         # calculate LED state
         # Red LED
