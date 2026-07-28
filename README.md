@@ -63,13 +63,14 @@ or for SLES: /usr/lib/systemd/system/trafficlight.service
 [Unit]
 Description=Trafficlight service
 After=multi-user.target
-[Service]
-#Type=simple
-WatchdogSec=30s
-Restart=on-failure
 StartLimitInterval=5min
 StartLimitBurst=4
 StartLimitAction=reboot-force
+[Service]
+Type=simple
+WatchdogSec=30s
+RestartSec=75s
+Restart=on-failure
 WorkingDirectory=/opt/trafficlight
 ExecStart=/usr/bin/python3 /opt/trafficlight/checkstatus.py
 [Install]
